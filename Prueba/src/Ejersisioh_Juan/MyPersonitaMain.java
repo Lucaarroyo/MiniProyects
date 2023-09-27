@@ -13,6 +13,7 @@ public class MyPersonitaMain {
 
 	public static void main(String[] args) {	
 		//Variables que vamos a necesitar para la ejecución del programa
+		//PRUEBANNN
 		int edad;
 		String DNI;
 		String sexo;
