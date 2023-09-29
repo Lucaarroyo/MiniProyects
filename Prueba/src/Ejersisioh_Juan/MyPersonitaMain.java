@@ -13,7 +13,6 @@ public class MyPersonitaMain {
 
 	public static void main(String[] args) {	
 		//Variables que vamos a necesitar para la ejecución del programa
-		//PRUEBANNN
 		int edad;
 		String DNI;
 		String sexo;
@@ -22,6 +21,7 @@ public class MyPersonitaMain {
 		//Declaramos entrada por teclado
 		Scanner read= new Scanner (System.in);
 		//Pedimos los datos al usuario
+		
 		System.out.println("Vamos a proceder a ejecutar Personita, su asistente de peso personal");
 		System.out.println("Por favor introduzca su edad");
 		edad=read.nextInt();
