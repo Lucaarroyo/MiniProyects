@@ -10,7 +10,7 @@ public class Ejercicio_Lectoescritura {
 
 	public static void main(String[] args) {
 		
-		public static int sui=0;
+		Integer sui;
 		Scanner teclao = new Scanner (System.in);
 		//Creamos un switch case menú para ver cada uno de los ejercicios
 		do {
