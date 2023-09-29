@@ -1,11 +1,11 @@
-package UsoTuberías1;
+package TuberiasEJ1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
 
-public class MymainTubes {
+public class clasePrueba1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		ArrayList aleatorios = new ArrayList(); 
 
