@@ -15,8 +15,9 @@ public class clasePrueba1 {
 		LlenarArrayAleatorios ();
 		
 		Impresioncol (aleatorios);
+		System.out.println();
+		System.out.println();
 		Impresion (aleatorios);
-		
 		
 	}
 	
