@@ -70,7 +70,7 @@ public class ManiulacionArchivos {
 			//Creamos un switch case menú para ver cada uno de los ejercicios
 			switch (sui) {
 //__________________________________________________________________________________________________________________________
-				case (sui=1):
+				case 1:
 					System.out.println("Introduzca el numero de párrafos del documento");
 					int lineas1= teclao.nextInt();
 					//Ejercicio 2 (El usuario introduce un numero de párrafos del documento)
@@ -97,7 +97,7 @@ public class ManiulacionArchivos {
 				
 					break;
 //__________________________________________________________________________________________________________________________
-				case (sui=2):		
+				case 2:		
 					int lineas2= teclao.nextInt();
 					//Ejercicio 2 (Escribir en el las líneas del usuario )
 					if(Holi.exists()){
@@ -123,7 +123,7 @@ public class ManiulacionArchivos {
 				
 					break;
 //__________________________________________________________________________________________________________________________
-				case (sui=3):		
+				case 3:		
 					//Ejercicio 3 (Lee el fichero "HoliOscar2.txt" con FileReader y muestra su contenido por pantalla.)
 					//Si no existe propone la lectura de "HoliOscar1.txt"
 					int flag=0;
@@ -230,10 +230,10 @@ public class ManiulacionArchivos {
 					break;
 					*/
 //___________________________________________________________________________________________________________________________________
-				case (sui=5):		
+				case 5:		
 					//Ejercicio 5 
 					break;
-				case (sui=6):		
+				case 6:		
 					//Ejercicio 6 
 					break;
 				default:
