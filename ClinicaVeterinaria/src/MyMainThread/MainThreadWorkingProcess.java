@@ -1,5 +1,6 @@
 package MyMainThread;
 import java.io.File;
+//import FileManagementProject.FileManagementHelper;
 import java.io.FileNotFoundException;
 
 public class MainThreadWorkingProcess {
@@ -15,7 +16,8 @@ public class MainThreadWorkingProcess {
 		/* Una vez generado el documento, vamos a crear dos copias del documento, de modo que operaremos con la copia y
 		 * tendremos el original como backup
 		 */
-		FileManagementHelpers.copiar_documento (test, test2);
+		//FileManagementHelper fmh = new FileManagementHelper();
+		//fmh.copiar_documento (test, test2);
 	}
 
 }
