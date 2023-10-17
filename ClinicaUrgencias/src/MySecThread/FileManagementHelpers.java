@@ -1,9 +1,10 @@
-package MyMainThread;
+package MySecThread;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import ObjetoPpal.ClaseObjectUsuario;
+import java.util.StringTokenizer;
+import ObjetoSecundario.ClaseObjectPaciente;
 
 public class FileManagementHelpers {
 
@@ -11,20 +12,44 @@ public class FileManagementHelpers {
 		final File File = null;
 	}
 
-	// Metodo crear un documento con datos aleatorios
-	public static void rellenar(int total) {
-		FileWriter fichero = null;
-		PrintWriter pw = null;
-		try {
-			fichero = new FileWriter("C:\\temp\\Clinica\\test.txt");
-			pw = new PrintWriter(fichero);
-			for (int i = 0; i < total; i++) {
-				ClaseObjectUsuario usuario = new ClaseObjectUsuario();
-				pw.println("Usuario " + i + usuario.toString());
-			}
-			System.out.println("Proceso de rellenado realizado con exito.");
+	// Metodo crear un documento con datos aleatorios recuperados de la BBDD de
+	// pacientes y los metemos en urgencias
+	public static void rellenar_paciente() throws IOException {
+		String arrayenfermedad[] = new String[10];
+		// La enfermedaad es la primra parte y la gravedad standard es la segunda
+		// Enfermedades comunes a todas las especies
+		arrayenfermedad[0] = "Diarrea, 1";
+		arrayenfermedad[1] = "Salmonelosis, 2";
+		arrayenfermedad[2] = "Parásitos Internos, 1";
+		arrayenfermedad[3] = "Parásitos Exernos, 1";
+		arrayenfermedad[4] = "Vómitos, 1";
+		arrayenfermedad[5] = "Parvovirus, 2"; // Perros
+		arrayenfermedad[6] = "Leishmaniosis, 3"; // Perros
+		arrayenfermedad[7] = "Diarrea, 1"; // Gatos
+		arrayenfermedad[8] = "Leptospirosis, 2"; // Roedores
+		arrayenfermedad[9] = "Cólera aviar, 3"; // Aves
 
-		} catch (Exception e) {
+		//Total de pacientes que han ido a urgencias
+		int pacientes = (int) (Math.random() * (5 + 1));
+		//ID de la urgencia
+		int cont = 0;
+		File urgencias = new File("C:\\temp\\Clinica\\test.txt");
+		FileWriter fichero = new FileWriter("C:\\temp\\Clinica\\test3.txt");
+		PrintWriter pw = new PrintWriter(fichero);
+		File archivo = null;
+	    FileReader fr = null;
+		try (BufferedReader br = new BufferedReader(new FileReader(urgencias))) {
+			String line;
+			
+			while ((line = br.readLine()) != null & pacientes > 0) {
+				int enfermedad = (int) (Math.random() * (9 + 1));
+				pw.println("Urgencia: " + cont + " " + (String) line + " Enfermedad: " + arrayenfermedad[enfermedad]);
+				cont++;
+				pacientes--;
+			} 
+			System.out.println("Proceso de rellenado de urgencias realizado con exito.");
+		} catch (IOException e) {
+			System.out.println("Ha habido un problema en el proceso de rellenado de urgencias");
 			e.printStackTrace();
 		} finally {
 			try {
@@ -32,7 +57,9 @@ public class FileManagementHelpers {
 				// asegurarnos que se cierra el fichero.
 				if (null != fichero)
 					fichero.close();
+				System.out.println("Fichero cerrado con exito.");
 			} catch (Exception e2) {
+				System.out.println("No se ha podido cerrar el fichero de rellenar urgencias.");
 				e2.printStackTrace();
 			}
 		}
