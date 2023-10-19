@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ExEvaluableAidaFdz021023/ExEvaluableAidaFdz021023.iml" filepath="$PROJECT_DIR$/ExEvaluableAidaFdz021023/ExEvaluableAidaFdz021023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Files_Proyect/Files_Proyect.iml" filepath="$PROJECT_DIR$/Files_Proyect/Files_Proyect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MiniProyects.iml" filepath="$PROJECT_DIR$/MiniProyects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MiniProyects1.iml" filepath="$PROJECT_DIR$/MiniProyects1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PipesExercice/PipesExercice.iml" filepath="$PROJECT_DIR$/PipesExercice/PipesExercice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prueba/Prueba.iml" filepath="$PROJECT_DIR$/Prueba/Prueba.iml" />
+    </modules>
+  </component>
+</project>

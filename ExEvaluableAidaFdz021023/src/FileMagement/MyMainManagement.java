@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class MyMainManagement {
 // A la wena mañana
+	//Soy er Yaco
+	//Soy er Yaco en eclipse
+
 	public static void main(String[] args) {
 		FileManagementHelpers helpers = new FileManagementHelpers();
 		// Vamos a ir haciendo un poco de todo recopilatorio de lo necesario
