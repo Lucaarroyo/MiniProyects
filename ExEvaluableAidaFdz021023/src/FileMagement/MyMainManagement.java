@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class MyMainManagement {
-
+// A la wena mañana
 	public static void main(String[] args) {
 		FileManagementHelpers helpers = new FileManagementHelpers();
 		// Vamos a ir haciendo un poco de todo recopilatorio de lo necesario
