@@ -9,7 +9,7 @@ public class MainThreadWorkingProcess {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// vamos a generar un numero aleatorio de casos para testear
-		int rannd = (int) Math.floor(Math.random() * (50 - 0 + 10));
+		int rannd = (int) Math.floor(Math.random() * (50 - 0 + 20));
 		File test = new File("C:\\temp\\Clinica\\test.txt");
 		File test2 = new File("C:\\temp\\Clinica\\test2.txt");
 		File test3 = new File("C:\\temp\\Clinica\\predefined.txt");
