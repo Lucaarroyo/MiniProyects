@@ -7,6 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\aidaf\eclipse-workspace\ClinicaVeterinariaXML"/>
+			<item value="C:\Users\aidaf\eclipse-workspace\MiniProyects\"/>
 			<item value="C:\Users\aidaf\eclipse-workspace\MiniProyects\Prueba"/>
 			<item value="C:\Users\aidaf\eclipse-workspace\Prueba"/>
 		</list>
