@@ -24,7 +24,7 @@ Para ello se debe solicitar por terminal el equipo.*/
 public class ejercicioMarcadoresDom {
 
 	public static void main(String[] args) {
-
+//que harta me tienen
 		// Comenzamos con el tratamiento de las posibles excepciones al cargar el
 		// archivo
 		try {
