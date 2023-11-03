@@ -156,7 +156,7 @@ public class mainMarcadoresDOM {
 			// Viendo la estructura del propio XML vemos que en el nodo padre casi nunca
 			// aparecen esots datos
 			if (nodo.hasChildNodes()) {
-				buscarResultadosPorEquipo1(nodo.getChildNodes(), equipoABuscar);
+				buscarResultadosPorEquipo(nodo.getChildNodes(), equipoABuscar);
 			}
 		}
 	}// Fin del Método de buscar resultados por equipos
