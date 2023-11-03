@@ -46,6 +46,10 @@ public class mainMarcadoresDOM {
 			// Función disponible en los métodos custom creados para el desarrollo del
 			// programa
 			mostrarJerarquia(nodeList, 0);
+			System.out.println();
+			System.out.println();
+			//Mostramos las competiciones
+			mostrarCompeticiones (nodeList,0);
 			// Solicitar el nombre del equipo por terminal
 			Scanner scanner = new Scanner(System.in);
 			System.out.println();
@@ -64,7 +68,7 @@ public class mainMarcadoresDOM {
 	// ____________________________________________________________________________________
 	// Función recursiva para mostrar la jerarquía del XML
 	public static void mostrarJerarquia(NodeList nodeList, int nivel) {
-		for (int i = 0; i < nodeList.getLength(); i++) {
+		for (int i = nivel; i < nodeList.getLength(); i++) {
 			Node nodo = nodeList.item(i);
 
 			// Mostrar el nombre del nodo y el nivel actual
@@ -78,36 +82,18 @@ public class mainMarcadoresDOM {
 	} // Fin de la función de mostrar la jerarquía
 
 	public static void mostrarCompeticiones(NodeList nodeList, int nivel) {
-		for (int i = 0; i < nodeList.getLength(); i++) {
+		for (int i = nivel; i < nodeList.getLength(); i++) {
 			Node nodo = nodeList.item(i);
-
-			// Mostrar el nombre del nodo si coincide con competición
-			if (nodo.getNodeName() equals "competiciones") {
-			System.out.println("competiciones LVL " + nivel + ": " + nodo.getNodeName() + " " + nodo.getNodeId ());
-
-			// Llamar recursivamente a la función auxiliar anterior para los nodos hijos y los mostramos
-			if (nodo.hasChildNodes()) {
-				mostrarJerarquia(nodo.getChildNodes(), nivel + 1);
-			}
-			}
-		}//Fin del bucle for
-	}// Fin del metodo de mostrar las competiciones
-
-	public static void mostrarCompeticionesalt(NodeList nodeList, int nivel) {
-		for (int i = 0; i < nodeList.getLength(); i++) {
-			Node nodo = nodeList.item(i);
-
-			// Mostrar el nombre del nodo si coincide con
+			String id="id";
+			// Mostrar el nombre del nodo si coincide con competiciones
 			// NO SE POR QUE ES ESTE ERROR JODEEEEEEER
-			if (nodo.getNodeName.equals("competiciones")) {
-				System.out
-						.println("competiciones LVL " + nivel + ": " + nodo.getNodeName() + " " + nodo.getNodeValue());
-
-				// Llamar recursivamente a la función auxiliar anterior para los nodos hijos y
-				// los mostramos
+			if (nodo.getNodeType() == Node.ELEMENT_NODE && nodo.getNodeName().equals("competicion")) {
+				//Mostramos y vamos a mostrar todos los atributos, con escaso éxito
+				System.out.println("competiciones LVL " + i + ": " + nodo.getNodeName() + " " + nodo.getAttributes());
+				// Llamar recursivamente a la función auxiliar anterior para los nodos hijos y los mostramos
 				if (nodo.hasChildNodes()) {
-					mostrarJerarquia(nodo.getChildNodes(), nivel + 1);
-				}
+					mostrarCompeticiones(nodo.getChildNodes(), i + 1);
+				}//Fin del If que nos da la recursividad sobre el método
 			}
 		} // Fin del bucle for
 	}// Fin del metodo de mostrar las competiciones
