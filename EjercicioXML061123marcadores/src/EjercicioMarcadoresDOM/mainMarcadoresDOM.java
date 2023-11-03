@@ -188,7 +188,7 @@ public class mainMarcadoresDOM {
 					System.out.println("Resultado del partido:"+ reslocal + "-" + resvisit);
 					System.out.println("Local: " + equipoLocal);
 					System.out.println("Visitante: " + equipoVisitante);
-					// Por dios que no se me tenga en cuenta que no tengo ni puñetera idea del tema
+					// Por dios que no se me tenga en cuenta que no tengo ni puñetera idea de Futbol
 				}
 			}
 
