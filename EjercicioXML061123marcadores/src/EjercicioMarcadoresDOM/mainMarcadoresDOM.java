@@ -53,7 +53,7 @@ public class mainMarcadoresDOM {
 			System.out.println("Introduce el nombre del equipo a buscar: ");
 			String equipoABuscar = scanner.nextLine();
 			// Llamamos a la función para buscar resultados del equipo
-			buscarResultadosPorEquipo1(nodeList, equipoABuscar);
+			buscarResultadosPorEquipo(nodeList, equipoABuscar);
 		} /* Fin del Try */catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -111,49 +111,8 @@ public class mainMarcadoresDOM {
 			}
 		} // Fin del bucle for
 	}// Fin del metodo de mostrar las competiciones
-
+	
 	public static void buscarResultadosPorEquipo(NodeList nodeList, String equipoABuscar) {
-		for (int i = 0; i < nodeList.getLength(); i++) {
-			Node nodo = nodeList.item(i);
-
-			// Verificar si el nodo es un partido de fútbol y contiene el equipo buscado
-			if (nodo.getNodeType() == Node.ELEMENT_NODE && nodo.getNodeName().equals("partido")) {
-				NodeList hijosPartido = nodo.getChildNodes();
-				String equipoLocal = "";
-				String equipoVisitante = "";
-
-				// Recorrer los nodos hijos para obtener los equipos del partido
-				for (int j = 0; j < hijosPartido.getLength(); j++) {
-					Node hijo = hijosPartido.item(j);
-					if (hijo.getNodeType() == Node.ELEMENT_NODE) {
-						if (hijo.getNodeName().equals("local")) {
-							equipoLocal = hijo.getTextContent();
-						} else if (hijo.getNodeName().equals("visitante")) {
-							equipoVisitante = hijo.getTextContent();
-						}
-					}
-				}
-
-				// Verificar si el equipo buscado participó en el partido
-				if (equipoLocal.equals(equipoABuscar) || equipoVisitante.equals(equipoABuscar)) {
-					System.out.println("Resultado del partido:");
-					System.out.println("Local: " + equipoLocal);
-					System.out.println("Visitante: " + equipoVisitante);
-					// Por dios que no se me tenga en cuenta que no tengo ni puñetera idea del tema
-				}
-			}
-
-			// Llamar recursivamente a la función para los nodos hijos a ver si hay equipos
-			// Viendo la estructura del propio XML vemos que en el nodo padre casi nunca
-			// aparecen esots datos
-			if (nodo.hasChildNodes()) {
-				buscarResultadosPorEquipo(nodo.getChildNodes(), equipoABuscar);
-				// buscarResultadosPorEquipo(nodo.getChildNodes(), equipoABuscar);
-			}
-		}
-	}// Fin del Método de buscar resultados por equipos
-
-	public static void buscarResultadosPorEquipo1(NodeList nodeList, String equipoABuscar) {
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			Node nodo = nodeList.item(i);
 
@@ -162,8 +121,8 @@ public class mainMarcadoresDOM {
 				NodeList hijosPartido = nodo.getChildNodes();
 				String equipoLocal = "";
 				String equipoVisitante = "";
-				String reslocal="";
-				String resvisit="";
+				String reslocal = "";
+				String resvisit = "";
 
 				// Recorrer los nodos hijos para obtener los equipos del partido
 				for (int j = 0; j < hijosPartido.getLength(); j++) {
@@ -174,18 +133,19 @@ public class mainMarcadoresDOM {
 						} else if (hijo.getNodeName().equals("equipovisitante")) {
 							equipoVisitante = hijo.getTextContent();
 						}
-						
-						if (hijo.getNodeName().equals ("resultadolocal")) {
+
+						if (hijo.getNodeName().equals("resultadolocal")) {
 							reslocal = hijo.getTextContent();
-						}else if(hijo.getNodeName().equals ("resultadovisitante")) {
-							resvisit = hijo.getTextContent();						}
+						} else if (hijo.getNodeName().equals("resultadovisitante")) {
+							resvisit = hijo.getTextContent();
+						}
 					}
 				}
 
 				// Verificar si el equipo buscado participó en el partido
 				if (equipoLocal.equals(equipoABuscar) || equipoVisitante.equals(equipoABuscar)) {
 					System.out.println();
-					System.out.println("Resultado del partido:"+ reslocal + "-" + resvisit);
+					System.out.println("Resultado del partido:" + reslocal + "-" + resvisit);
 					System.out.println("Local: " + equipoLocal);
 					System.out.println("Visitante: " + equipoVisitante);
 					// Por dios que no se me tenga en cuenta que no tengo ni puñetera idea de Futbol
