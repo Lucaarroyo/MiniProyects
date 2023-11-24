@@ -17,35 +17,65 @@ public class XLEjercicios301023 {
 			factory.setValidating(true);
 			factory.setIgnoringElementContentWhitespace(true);
 			DocumentBuilder builder = factory.newDocumentBuilder();
+			// populateXML(builder);
+
+			// EJ1________________________________________________________________________________
 			Document xmlFile = builder.parse(new File("C:/temp/XMLfiles/books.xml"));
 			String nodeList = "book";
 			String textToFind = "Don Quijote";
 			System.out.println("Ejercicio 1: " + getIdNodo(xmlFile, nodeList, textToFind));
+
+			// EJ2________________________________________________________________________________
+			xmlFile = builder.parse(new File("C:/temp/XMLfiles/movies.xml"));
+			nodeList = "movies";
+			textToFind = "tt0133093";
+			System.out.println("Ejercicio 2: " + getText(xmlFile, nodeList, textToFind));
+
+			// EJ3________________________________________________________________________________
+			xmlFile = builder.parse(new File("C:/temp/XMLfiles/students.xml"));
+			System.out.println("Ejercicio 3: " + getNumNodo(xmlFile));
+
+			// EJ4________________________________________________________________________________
+			xmlFile = builder.parse(new File("C:/temp/XMLfiles/products.xml"));
+			nodeList = "prices";
+			System.out.println("Ejercicio 4: " + getAllText(xmlFile, nodeList));
+
+			// EJ5________________________________________________________________________________
+			xmlFile = builder.parse(new File("C:/temp/XMLfiles/data.xml"));
+			//System.out.println("Ejercicio 5: " + getAllNodes(xmlFile));
 			
-			//populateXML(builder);
+			// EJ6________________________________________________________________________________
+			// EJ7________________________________________________________________________________
+			// EJ8________________________________________________________________________________
+			// EJ9________________________________________________________________________________
+			// EJ10_______________________________________________________________________________
+			// EJ11_______________________________________________________________________________
+			// EJ12_______________________________________________________________________________
+			// EJ13_______________________________________________________________________________
+			// EJ14_______________________________________________________________________________
+			// EJ15_______________________________________________________________________________
+			// EJ16_______________________________________________________________________________
+			// EJ17_______________________________________________________________________________
+			// EJ18_______________________________________________________________________________
+			// EJ19_______________________________________________________________________________
+			// EJ20_______________________________________________________________________________
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		
-
 	}
-//CUSTOM METHODS___________________________________________________________________________________
 
-	//Método para rellenar los XML
-	private static void populateXML(DocumentBuilder builder){
+//CUSTOM METHODS___________________________________________________________________________________
+	// Método para rellenar los XML
+	private static void populateXML(DocumentBuilder builder) {
 		File xmlTemplate = new File("");
 		FileWriter fichero = null;
 		PrintWriter pw = null;
-		//Document doc = builder.parse(xmlTemplate);
-		
-		//Creamos el XML de los libros
-		String books= "<books>\r\n"
-				+ "  <book id=\"bk101\">\r\n"
-				+ "    <title>Don Quijote</title>\r\n"
-				+ "    <author>Cervantes</author>\r\n"
-				+ "  </book>\r\n"
-				+ "</books>";
+		// Document doc = builder.parse(xmlTemplate);
+
+		// Creamos el XML de los libros
+		String books = "<books>\r\n" + "  <book id=\"bk101\">\r\n" + "    <title>Don Quijote</title>\r\n"
+				+ "    <author>Cervantes</author>\r\n" + "  </book>\r\n" + "</books>";
 		xmlTemplate = new File("C:/temp/XMLfiles/books.xml");
 		try {
 			fichero = new FileWriter("C:/temp/XMLfiles/books.xml");
@@ -55,72 +85,87 @@ public class XLEjercicios301023 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		/*
-		//Creamos el XML de las Películas
-		String movies = "<movies>\r\n"
-				+ "  <movie id=\"tt0133093\">\r\n"
-				+ "    <title>The Matrix</title>\r\n"
-				+ "    <year>1999</year>\r\n"
-				+ "  </movie>\r\n"
-				+ "</movies>";
-		xmlTemplate = new File("../filesXML/movies.xml");
-		
-		//Creamos el XML de los estudiantes
-		String students ="<students>\r\n"
-				+ "  <student>\r\n"
-				+ "    <name>John</name>\r\n"
-				+ "    <age>20</age> \r\n"
-				+ "  </student>\r\n"
-				+ "  <student>  \r\n"
-				+ "    <name>Sarah</name>\r\n"
-				+ "    <age>19</age>\r\n"
-				+ "  </student>\r\n"
-				+ "</students>";
-		xmlTemplate = new File("../filesXML/students.xml");
-		
-		//Creamos el XML de los Productos
-		String products ="<products>\r\n"
-				+ "  <product>\r\n"
-				+ "    <name>Product 1</name>\r\n"
-				+ "    <price>10.5</price>\r\n"
-				+ "  </product>\r\n"
-				+ "  <product>\r\n"
-				+ "    <name>Product 2</name>\r\n"
-				+ "    <price>15</price>\r\n"
-				+ "  </product>\r\n"
-				+ "</products>";
-		xmlTemplate = new File("../filesXML/products.xml");
-		
-		*/
 	}
-	
+
 	// EJ1________________
-	//Lee el archivo books.xml y obten el valor del atributo id del nodo <book> con título "Don Quijote".
-	private static String  getIdNodo (Document document, String nodeListToFind, String textToFind) {
-		String idNodo= "Not found";
+	// Lee el archivo books.xml y obten el valor del atributo id del nodo <book> con
+	// título "Don Quijote".
+	private static String getIdNodo(Document document, String nodeListToFind, String textToFind) {
+		String idNodo = "Not found";
 		Element root = document.getDocumentElement();
 		NodeList nodeList = root.getElementsByTagName(nodeListToFind);
-		
-		for(int i = 0; i < nodeList.getLength(); i++) {
+
+		for (int i = 0; i < nodeList.getLength(); i++) {
 			Element e = (Element) nodeList.item(i);
-			if(e.getElementsByTagName("title").item(0).getTextContent().equals(textToFind)) {
+			if (e.getElementsByTagName("title").item(0).getTextContent().equals(textToFind)) {
 				idNodo = e.getAttribute("id");
-				break;
+				break;// Sale del bucle con que encuentre la primera coincidencia
 			}
 		}
-		
 		return idNodo;
-
 	}
 
 	// EJ2________________
+	// Lee el archivo movies.xml y obten el texto dentro del nodo <title> de la
+	// película con id "tt0133093".
+	private static String getText(Document document, String nodeListToFind, String textToFind) {
+		String nameNodo = "Not found";
+		Element root = document.getDocumentElement();
+		NodeList nodeList = root.getElementsByTagName(nodeListToFind);
+
+		for (int i = 0; i < nodeList.getLength(); i++) {
+			Element e = (Element) nodeList.item(i);
+			if (e.getElementsByTagName("id").item(0).getTextContent().equals(textToFind)) {
+				nameNodo = e.getAttribute("title");
+				break; // Sale del bucle con que encuentre la primera coincidencia
+			}
+		}
+		return nameNodo;
+	}
 
 	// EJ3________________
+	// Lee el archivo students.xml y cuenta cuántos nodos <student> hay.
+	private static int getNumNodo(Document document) {
+		int numNodo = 0;
+		Element root = document.getDocumentElement();
+		NodeList nodeList = root.getElementsByTagName("student");
+
+		for (int i = 0; i < nodeList.getLength(); i++) {
+			Element e = (Element) nodeList.item(i);
+			if (e.getNodeName().equals("student")) {	
+			numNodo++;
+			}
+		}
+		return numNodo;
+	}
 
 	// EJ4________________
+	// Lee el archivo products.xml y obten todos los valores de los nodos <price>
+	private static String getAllText(Document document, String nodeListToFind) {
+		String pricelist = "";
+		Element root = document.getDocumentElement();
+		NodeList nodeList = root.getElementsByTagName(nodeListToFind);
 
+		for (int i = 0; i < nodeList.getLength(); i++) {
+			Element e = (Element) nodeList.item(i);
+			pricelist += pricelist + e.getElementsByTagName("price") + ", ";
+		}
+		return pricelist;
+	}
+	
 	// EJ5________________
+	//Lee el archivo data.xml, recorre todos sus nodos y muestra sus nombres y valores.
+	private static void getAllNodes(Document document) {
+		
+		Element root = document.getDocumentElement();
+		NodeList nodeList = (NodeList) root.getAttributeNode(null);
+
+		for (int i = 0; i < nodeList.getLength(); i++) {
+			Element e = (Element) nodeList.item(i);
+			
+			
+		}
+	}
 
 	// EJ6________________
 
