@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\aidaf\Downloads\PROYECTO TEMA 5"/>
 			<item value="C:\Users\aidaf\eclipse-workspace\ClinicaVeterinariaXML"/>
 			<item value="C:\Users\aidaf\eclipse-workspace\MiniProyects\"/>
 			<item value="C:\Users\aidaf\eclipse-workspace\MiniProyects\Prueba"/>
@@ -22,6 +23,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\aidaf\Documents\GitHub\MiniProyects\IYG_ChatSockets-20231124T080203Z-001"/>
 			<item value="C:\Users\Dii\Documents\GitHub\MiniProyects"/>
 			<item value="C:\Users\aidaf\eclipse-workspace\MiniProyects"/>
 		</list>
