@@ -7,9 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2YcEZd8HOhbAdU2ci6uubj09ulF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -17,9 +17,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/aidaf/Documents/GitHub/MiniProyects/EjercicioChatConSockets",
+    "last_opened_file_path": "C:/Users/aidaf/IdeaProjects/patata",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -32,6 +33,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700816523461</updated>
       <workItem from="1700816524461" duration="184000" />
+      <workItem from="1700829314311" duration="47000" />
     </task>
     <servers />
   </component>
