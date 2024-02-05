@@ -24,6 +24,7 @@ public class AdministracionKassSA {
 				throw new RuntimeException(e);
 			}
 //luca ha estado aqi
+			//jy
 		});
 		// Creamos el hilo de los pacientes que se van de alta y le damos las
 		// funcionalidades
