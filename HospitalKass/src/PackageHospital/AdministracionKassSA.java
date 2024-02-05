@@ -23,7 +23,7 @@ public class AdministracionKassSA {
 			} catch (InterruptedException e) {
 				throw new RuntimeException(e);
 			}
-
+//luca ha estado aqi
 		});
 		// Creamos el hilo de los pacientes que se van de alta y le damos las
 		// funcionalidades

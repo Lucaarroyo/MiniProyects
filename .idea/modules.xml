@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlgoritmoFilosofos/AlgoritmoFilosofos.iml" filepath="$PROJECT_DIR$/AlgoritmoFilosofos/AlgoritmoFilosofos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClinicaVeterinaria/ClinicaVeterinaria.iml" filepath="$PROJECT_DIR$/ClinicaVeterinaria/ClinicaVeterinaria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClinicaVeterinariaXML/ClinicaVeterinariaXML.iml" filepath="$PROJECT_DIR$/ClinicaVeterinariaXML/ClinicaVeterinariaXML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjercicioAccesoDatosSQL171123/EjercicioAccesoDatosSQL171123.iml" filepath="$PROJECT_DIR$/EjercicioAccesoDatosSQL171123/EjercicioAccesoDatosSQL171123.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjercicioChatConSocket/EjercicioChatConSocket.iml" filepath="$PROJECT_DIR$/EjercicioChatConSocket/EjercicioChatConSocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjercicioXML061123marcadores/EjercicioXML061123marcadores.iml" filepath="$PROJECT_DIR$/EjercicioXML061123marcadores/EjercicioXML061123marcadores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosXMLH2171123marcadores/EjerciciosXMLH2171123marcadores.iml" filepath="$PROJECT_DIR$/EjerciciosXMLH2171123marcadores/EjerciciosXMLH2171123marcadores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosXML_AccDatos/EjerciciosXML_AccDatos.iml" filepath="$PROJECT_DIR$/EjerciciosXML_AccDatos/EjerciciosXML_AccDatos.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExEvaluableAidaFdz021023/ExEvaluableAidaFdz021023.iml" filepath="$PROJECT_DIR$/ExEvaluableAidaFdz021023/ExEvaluableAidaFdz021023.iml" />
       <module fileurl="file://$PROJECT_DIR$/Files_Proyect/Files_Proyect.iml" filepath="$PROJECT_DIR$/Files_Proyect/Files_Proyect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HospitalKass/HospitalKass.iml" filepath="$PROJECT_DIR$/HospitalKass/HospitalKass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IYG_ChatSockets-20231124T080203Z-001/IYG_ChatSockets-20231124T080203Z-001.iml" filepath="$PROJECT_DIR$/IYG_ChatSockets-20231124T080203Z-001/IYG_ChatSockets-20231124T080203Z-001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Libro/Libro.iml" filepath="$PROJECT_DIR$/Libro/Libro.iml" />
       <module fileurl="file://$PROJECT_DIR$/MiniProyects.iml" filepath="$PROJECT_DIR$/MiniProyects.iml" />
       <module fileurl="file://$PROJECT_DIR$/MiniProyects1.iml" filepath="$PROJECT_DIR$/MiniProyects1.iml" />
       <module fileurl="file://$PROJECT_DIR$/PipesExercice/PipesExercice.iml" filepath="$PROJECT_DIR$/PipesExercice/PipesExercice.iml" />
